@@ -1,0 +1,300 @@
+
+Showing logs for build [32mdukecon-jx-jax-prep-dukecon-fee-4ghdn-2[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1599570697.4491026,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mdukecon-jx-jax-prep-dukecon-fee-4ghdn-2[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mdukecon-jx-jax-prep-dukecon-fee-4ghdn-2[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mdukecon-jx-jax-prep-dukecon-fee-4ghdn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-dukecon-jx-jax-prep-dukecon-fee-4ghdn-r4drz[0m
+{"level":"info","ts":1599570706.1091883,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/dukecon-**-jax-prep/dukecon_feedback.git @ v1.0.0 in path /workspace/source"}
+{"level":"warn","ts":1599570706.1093228,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1599570706.1492145,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mdukecon-jx-jax-prep-dukecon-fee-4ghdn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mdukecon-jx-jax-prep-dukecon-fee-4ghdn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:957bcabd94a320abf23c61efad41491311ca041c
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mdukecon-jx-jax-prep-dukecon-fee-4ghdn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mdukecon-jx-jax-prep-dukecon-fee-4ghdn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.dukecon:dukecon-feedback >--------------------
+[INFO] Building dukecon-feedback 1.0.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ dukecon-feedback ---
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.2.RELEASE:build-info (spring-boot-build-info) @ dukecon-feedback ---
+[INFO] 
+[INFO] --- git-commit-id-plugin:2.2.6:revision (default) @ dukecon-feedback ---
+[WARNING] Exception caught during execution of command '[git, config, --system, --edit]' in '/usr/local/git/bin', return code '128', error message 'fatal: Invalid path '/usr/local/git/etc': No such file or directory
+'
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ dukecon-feedback ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ dukecon-feedback ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 12 source files to /workspace/source/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ dukecon-feedback ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /workspace/source/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ dukecon-feedback ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 8 source files to /workspace/source/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ dukecon-feedback ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+
+ +-------------------------------------------------------------------------------+
+ | WARNING:                                                                      |
+ | The junit-platform-surefire-provider has been deprecated and is scheduled to  |
+ | be removed in JUnit Platform 1.4. Please use the built-in support in Maven    |
+ | Surefire >= 2.22.0 instead.                                                   |
+ | » https://junit.org/junit5/docs/current/user-guide/#running-tests-build-maven |
+ +-------------------------------------------------------------------------------+
+
+[INFO] Running org.dukecon.feedback.domain.DukeconFeedbackApplicationTest
+13:13:01.684 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+13:13:01.776 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+13:13:01.825 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [org.dukecon.feedback.domain.DukeconFeedbackApplicationTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+13:13:01.885 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.dukecon.feedback.domain.DukeconFeedbackApplicationTest], using SpringBootContextLoader
+13:13:01.902 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.dukecon.feedback.domain.DukeconFeedbackApplicationTest]: class path resource [org/dukecon/feedback/domain/DukeconFeedbackApplicationTest-context.xml] does not exist
+13:13:01.905 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.dukecon.feedback.domain.DukeconFeedbackApplicationTest]: class path resource [org/dukecon/feedback/domain/DukeconFeedbackApplicationTestContext.groovy] does not exist
+13:13:01.910 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [org.dukecon.feedback.domain.DukeconFeedbackApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:13:02.023 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [org.dukecon.feedback.domain.DukeconFeedbackApplicationTest]
+13:13:02.400 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [org.dukecon.feedback.domain.DukeconFeedbackApplicationTest]: using defaults.
+13:13:02.402 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener]
+13:13:02.485 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@16eb3ea3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@273444fe, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@33bc72d1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1a75e76a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5524cca1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5032714f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@48bb62, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@353352b6, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@4681c175, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@57a78e3, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@402c4085, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6fa51cd4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2767e23c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@710c2b53]
+13:13:02.500 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@183ec003 testClass = DukeconFeedbackApplicationTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@7d9d0818 testClass = DukeconFeedbackApplicationTest, locations = '{}', classes = '{class org.dukecon.feedback.adapters.main.DukeconFeedbackMain, class org.dukecon.feedback.adapters.main.DukeconFeedbackMain}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@34e9fd99, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@38425407, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@217ed35e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3857f613], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+13:13:02.587 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.2.RELEASE)
+
+2020-09-08 13:13:04.777  INFO 81 --- [           main] o.d.f.d.DukeconFeedbackApplicationTest   : Starting DukeconFeedbackApplicationTest on dukecon-**-jax-prep-dukecon-fee-4ghdn-2-from-build-pack-k-s4t74 with PID 81 (started by root in /workspace/source)
+2020-09-08 13:13:04.785  INFO 81 --- [           main] o.d.f.d.DukeconFeedbackApplicationTest   : No active profile set, falling back to default profiles: default
+2020-09-08 13:13:14.446  INFO 81 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-09-08 13:13:14.831  INFO 81 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 277ms. Found 1 repository interfaces.
+2020-09-08 13:13:21.982  INFO 81 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$25f52303] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-08 13:13:22.782  INFO 81 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$bea2eb3d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-08 13:13:22.809  INFO 81 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-08 13:13:22.821  INFO 81 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@14998e21' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-08 13:13:22.936  INFO 81 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$e3778def] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-08 13:13:23.047  INFO 81 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-08 13:13:24.014  INFO 81 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2020-09-08 13:13:24.097  INFO 81 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-08 13:13:24.696  INFO 81 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-08 13:13:24.710  INFO 81 --- [           main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:testdb (H2 1.4)
+2020-09-08 13:13:25.015  INFO 81 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.023s)
+2020-09-08 13:13:25.089  INFO 81 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2020-09-08 13:13:25.203  INFO 81 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-09-08 13:13:25.213  INFO 81 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1 - init
+2020-09-08 13:13:25.374  INFO 81 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.291s)
+2020-09-08 13:13:26.338  INFO 81 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-08 13:13:26.584  INFO 81 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2020-09-08 13:13:26.588  INFO 81 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-09-08 13:13:26.996  INFO 81 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-08 13:13:27.516  INFO 81 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-09-08 13:13:29.622  INFO 81 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-08 13:13:37.715  INFO 81 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2020-09-08 13:13:37.994  INFO 81 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5383bf08, org.springframework.security.web.context.SecurityContextPersistenceFilter@773c7147, org.springframework.web.filter.CorsFilter@2586e878, org.keycloak.adapters.springsecurity.filter.KeycloakPreAuthActionsFilter@1e3566e, org.springframework.security.web.authentication.logout.LogoutFilter@56ba8e8c, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticationProcessingFilter@9f2fe2e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c3007d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3909a854, org.keycloak.adapters.springsecurity.filter.KeycloakSecurityContextRequestFilter@4dd4965a, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticatedActionsFilter@79273a4f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b7cf475, org.springframework.security.web.session.SessionManagementFilter@1ff81b0d, org.springframework.security.web.access.ExceptionTranslationFilter@1d0dad12, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5ca86715]
+2020-09-08 13:13:40.699  INFO 81 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-08 13:13:43.806  INFO 81 --- [           main] o.d.f.d.DukeconFeedbackApplicationTest   : Started DukeconFeedbackApplicationTest in 41.202 seconds (JVM running for 44.318)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 43.002 s - in org.dukecon.feedback.domain.DukeconFeedbackApplicationTest
+[INFO] Running org.dukecon.feedback.adapters.main.SpringRestDocsTest
+2020-09-08 13:13:44.588  INFO 81 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.dukecon.feedback.adapters.main.SpringRestDocsTest], using SpringBootContextLoader
+2020-09-08 13:13:44.674  INFO 81 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [org.dukecon.feedback.adapters.main.SpringRestDocsTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-08 13:13:44.676  INFO 81 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.dukecon.feedback.adapters.main.SpringRestDocsTest]: SpringRestDocsTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-08 13:13:44.700  INFO 81 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.dukecon.feedback.adapters.main.DukeconFeedbackMain for test class org.dukecon.feedback.adapters.main.SpringRestDocsTest
+2020-09-08 13:13:44.708  INFO 81 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener]
+2020-09-08 13:13:44.714  INFO 81 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@a5d23c9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@795131d6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7d7a8d23, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3acc65f0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@59ec5a0b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@29431f61, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@f98cff, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@59c38af5, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@6244afc4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@534d0cfa, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1f1ffc18, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5a4e492c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1d33e72e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@26a202ae]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.2.RELEASE)
+
+2020-09-08 13:13:44.877  INFO 81 --- [           main] o.d.f.adapters.main.SpringRestDocsTest   : Starting SpringRestDocsTest on dukecon-**-jax-prep-dukecon-fee-4ghdn-2-from-build-pack-k-s4t74 with PID 81 (started by root in /workspace/source)
+2020-09-08 13:13:44.880  INFO 81 --- [           main] o.d.f.adapters.main.SpringRestDocsTest   : No active profile set, falling back to default profiles: default
+2020-09-08 13:13:46.281  INFO 81 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-09-08 13:13:46.299  INFO 81 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 1 repository interfaces.
+2020-09-08 13:13:47.120  INFO 81 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$25f52303] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-08 13:13:47.207  INFO 81 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$bea2eb3d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-08 13:13:47.274  INFO 81 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-08 13:13:47.281  INFO 81 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@f7b7720' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-08 13:13:47.302  INFO 81 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$e3778def] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-08 13:13:47.313  INFO 81 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-08 13:13:47.629  INFO 81 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-09-08 13:13:47.643  INFO 81 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-09-08 13:13:47.643  INFO 81 --- [           main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:testdb (H2 1.4)
+2020-09-08 13:13:47.707  INFO 81 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.012s)
+2020-09-08 13:13:47.776  INFO 81 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": 1
+2020-09-08 13:13:47.784  INFO 81 --- [           main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2020-09-08 13:13:48.007  INFO 81 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-08 13:13:48.026  INFO 81 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-09-08 13:13:48.219  INFO 81 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-08 13:13:51.890  INFO 81 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2020-09-08 13:13:52.080  INFO 81 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@37dc7661, org.springframework.security.web.context.SecurityContextPersistenceFilter@36ce0bc2, org.springframework.web.filter.CorsFilter@2e015ac1, org.keycloak.adapters.springsecurity.filter.KeycloakPreAuthActionsFilter@4351d055, org.springframework.security.web.authentication.logout.LogoutFilter@65234a9, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticationProcessingFilter@25c06894, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@317fa5dd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@477906cf, org.keycloak.adapters.springsecurity.filter.KeycloakSecurityContextRequestFilter@5c2ae7d7, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticatedActionsFilter@6e7cb01a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e755d5f, org.springframework.security.web.session.SessionManagementFilter@5a88849, org.springframework.security.web.access.ExceptionTranslationFilter@e5f05f8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2b18b308]
+2020-09-08 13:13:53.783  INFO 81 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-08 13:13:55.199  INFO 81 --- [           main] o.d.f.adapters.main.SpringRestDocsTest   : Started SpringRestDocsTest in 10.477 seconds (JVM running for 55.711)
+2020-09-08 13:13:55.404  INFO 81 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-09-08 13:13:55.405  INFO 81 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-09-08 13:13:55.478  INFO 81 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 73 ms
+2020-09-08 13:13:56.719  INFO 81 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-09-08 13:13:56.721  INFO 81 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-09-08 13:13:56.733  INFO 81 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 10 ms
+feedback for javaland2018/111 (Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@cb2ab60: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_user; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_user)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.218 s - in org.dukecon.feedback.adapters.main.SpringRestDocsTest
+[INFO] Running org.dukecon.feedback.adapters.main.DukeconFeedbackMainTest
+2020-09-08 13:13:56.986  INFO 81 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.dukecon.feedback.adapters.main.DukeconFeedbackMainTest], using SpringBootContextLoader
+2020-09-08 13:13:56.988  INFO 81 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [org.dukecon.feedback.adapters.main.DukeconFeedbackMainTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-08 13:13:56.990  INFO 81 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.dukecon.feedback.adapters.main.DukeconFeedbackMainTest]: DukeconFeedbackMainTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-08 13:13:56.993  INFO 81 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.dukecon.feedback.adapters.main.DukeconFeedbackMain for test class org.dukecon.feedback.adapters.main.DukeconFeedbackMainTest
+2020-09-08 13:13:57.010  INFO 81 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener]
+2020-09-08 13:13:57.023  INFO 81 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4bd39edc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3ba50851, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5c20841d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1a1dd8eb, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4def900a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5e1bfe66, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6c399d4, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@726dd367, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@433362e0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@425a5c2e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@58cd6088, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@44a7661d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1cdb280b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@cf0bc92]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.076 s - in org.dukecon.feedback.adapters.main.DukeconFeedbackMainTest
+[INFO] Running org.dukecon.feedback.adapters.jpa.FeedbackStoreJpaTest
+2020-09-08 13:13:57.095  INFO 81 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.dukecon.feedback.adapters.jpa.FeedbackStoreJpaTest], using SpringBootContextLoader
+2020-09-08 13:13:57.099  INFO 81 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [org.dukecon.feedback.adapters.jpa.FeedbackStoreJpaTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-08 13:13:57.107  INFO 81 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener]
+2020-09-08 13:13:57.511  INFO 81 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3f8a44a4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@40625ac6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53cb9b1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@c2191a8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@61e34bec, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3305897c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@53945f9c, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@53b83897, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@28ffa527, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@372e972d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@463746eb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@54d9b23a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@15ae31b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@428e9be2]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.454 s - in org.dukecon.feedback.adapters.jpa.FeedbackStoreJpaTest
+[INFO] Running ConferenceIdValidationTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.52 s - in ConferenceIdValidationTest
+[INFO] Running TalkIdValidationTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s - in TalkIdValidationTest
+[INFO] Running FeedbackValidationTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.085 s - in FeedbackValidationTest
+2020-09-08 13:13:58.418  INFO 81 --- [       Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-08 13:13:58.479  INFO 81 --- [       Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-08 13:13:58.487  INFO 81 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-08 13:13:58.491  INFO 81 --- [       Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-08 13:13:58.492  INFO 81 --- [       Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-09-08 13:13:58.493  INFO 81 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-09-08 13:13:58.520  INFO 81 --- [       Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-09-08 13:13:58.534  INFO 81 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- asciidoctor-maven-plugin:1.5.7.1:process-asciidoc (generate-docs) @ dukecon-feedback ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+<script>:116: warning: instance variable @snippet_titles not initialized
+<script>:116: warning: instance variable @snippet_titles not initialized
+<script>:116: warning: instance variable @snippet_titles not initialized
+<script>:116: warning: instance variable @snippet_titles not initialized
+<script>:116: warning: instance variable @snippet_titles not initialized
+<script>:116: warning: instance variable @snippet_titles not initialized
+<script>:116: warning: instance variable @snippet_titles not initialized
+<script>:116: warning: instance variable @snippet_titles not initialized
+<script>:116: warning: instance variable @snippet_titles not initialized
+<script>:116: warning: instance variable @snippet_titles not initialized
+<script>:116: warning: instance variable @snippet_titles not initialized
+<script>:116: warning: instance variable @snippet_titles not initialized
+<script>:116: warning: instance variable @snippet_titles not initialized
+<script>:116: warning: instance variable @snippet_titles not initialized
+<script>:116: warning: instance variable @snippet_titles not initialized
+[INFO] Rendered /workspace/source/src/docs/asciidoc/api-guide.adoc
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ dukecon-feedback ---
+[INFO] Building jar: /workspace/source/target/dukecon-feedback-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.2.RELEASE:repackage (spring-boot-repackage) @ dukecon-feedback ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ dukecon-feedback ---
+[INFO] Installing /workspace/source/target/dukecon-feedback-1.0.0.jar to /home/jenkins/.mvnrepository/org/dukecon/dukecon-feedback/1.0.0/dukecon-feedback-1.0.0.jar
+[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/org/dukecon/dukecon-feedback/1.0.0/dukecon-feedback-1.0.0.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ dukecon-feedback ---
+[INFO] Using alternate deployment repository local-nexus::default::http://nexus/repository/maven-releases/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:28 min
+[INFO] Finished at: 2020-09-08T13:14:21Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32mdukecon-jx-jax-prep-dukecon-fee-4ghdn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
+v1.0.1
+
+Showing logs for build [32mdukecon-jx-jax-prep-dukecon-fee-4ghdn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+Error: error resolving dockerfile path: please provide a valid path to a Dockerfile within the build context with --dockerfile
+Usage:
+  executor [flags]
+  executor [command]
+
+Available Commands:
+  help        Help about any command
+  version     Print the version number of kaniko
+
+Flags:
+      --build-arg multi-arg type                  This flag allows you to pass in ARG values at build time. Set it repeatedly for multiple values.
+      --cache                                     Use cache when building image
+      --cache-dir string                          Specify a local directory to use as a cache. (default "/cache")
+      --cache-repo string                         Specify a repository to use as a cache, otherwise one will be inferred from the destination provided
+      --cache-ttl duration                        Cache timeout in hours. Defaults to two weeks. (default 336h0m0s)
+      --cleanup                                   Clean the filesystem at the end
+  -c, --context string                            Path to the dockerfile build context. (default "/workspace/")
+      --context-sub-path string                   Sub path within the given context.
+  -d, --destination multi-arg type                Registry the final image should be pushed to. Set it repeatedly for multiple destinations. (default )
+      --digest-file string                        Specify a file to save the digest of the built image to.
+  -f, --dockerfile string                         Path to the dockerfile to be built. (default "Dockerfile")
+      --force                                     Force building outside of a container
+  -h, --help                                      help for executor
+      --image-name-with-digest-file string        Specify a file to save the image name w/ digest of the built image to.
+      --insecure                                  Push to insecure registry using plain HTTP
+      --insecure-pull                             Pull from insecure registry using plain HTTP
+      --insecure-registry multi-arg type          Insecure registry using plain HTTP to push and pull. Set it repeatedly for multiple registries.
+      --label multi-arg type                      Set metadata for an image. Set it repeatedly for multiple labels.
+      --log-format string                         Log format (text, color, json) (default "color")
+      --log-timestamp                             Timestamp in log output
+      --no-push                                   Do not push the image to the registry
+      --oci-layout-path string                    Path to save the OCI image layout of the built image.
+      --registry-certificate key-value-arg type   Use the provided certificate for TLS communication with the given registry. Expected format is 'my.registry.url=/path/to/the/server/certificate'.
+      --registry-mirror string                    Registry mirror to use has pull-through cache instead of docker.io.
+      --reproducible                              Strip timestamps out of the image to make it reproducible
+      --single-snapshot                           Take a single snapshot at the end of the build.
+      --skip-tls-verify                           Push to insecure registry ignoring TLS verify
+      --skip-tls-verify-pull                      Pull from insecure registry ignoring TLS verify
+      --skip-tls-verify-registry multi-arg type   Insecure registry ignoring TLS verify to push and pull. Set it repeatedly for multiple registries.
+      --skip-unused-stages                        Build only used stages if defined to true. Otherwise it builds by default all stages, even the unnecessaries ones until it reaches the target stage / end of Dockerfile
+      --snapshotMode string                       Change the file attributes inspected during snapshotting (default "full")
+      --tarPath string                            Path to save the image in as a tarball instead of pushing
+      --target string                             Set the target build stage to build
+  -v, --verbosity string                          Log level (trace, debug, info, warn, error, fatal, panic) (default "info")
+      --whitelist-var-run                         Ignore /var/run directory when taking image snapshot. Set it to false to preserve /var/run/ in destination image. (Default true). (default true)
+
+Use "executor [command] --help" for more information about a command.
+
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
