@@ -1,0 +1,16 @@
+
+Showing logs for build [32mmeta-dukecon-jx-jax-prep-dukeco-4676l-1[0m stage [32mmeta-pipeline[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1599570479.4109924,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-dukecon-jx-jax-prep-dukeco-4676l-1[0m stage [32mmeta-pipeline[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmeta-dukecon-jx-jax-prep-dukeco-4676l-1[0m stage [32mmeta-pipeline[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmeta-dukecon-jx-jax-prep-dukeco-4676l-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-dukecon-jx-jax-prep-dukeco-4676l-cqbs2[0m
+{"level":"error","ts":1599570486.3294036,"caller":"git/git.go:41","msg":"Error running git [fetch --recurse-submodules=yes --depth=1 origin master]: exit status 128\nfatal: couldn't find remote ref master\n","stacktrace":"github.com/tektoncd/pipeline/pkg/git.run\n\tgithub.com/tektoncd/pipeline/pkg/git/git.go:41\ngithub.com/tektoncd/pipeline/pkg/git.Fetch\n\tgithub.com/tektoncd/pipeline/pkg/git/git.go:93\nmain.main\n\tgithub.com/tektoncd/pipeline/cmd/git-init/main.go:53\nruntime.main\n\truntime/proc.go:203"}
+{"level":"error","ts":1599570486.7086864,"caller":"git/git.go:41","msg":"Error running git [pull --recurse-submodules=yes origin]: exit status 1\nFrom https://github.com/dukecon-**-jax-prep/dukecon_feedback\n * [new branch]      bugfix/11  -> origin/bugfix/11\n * [new branch]      develop    -> origin/develop\n * [new branch]      issue_12   -> origin/issue_12\n * [new branch]      issue_8    -> origin/issue_8\nYou asked to pull from the remote 'origin', but did not specify\na branch. Because this is not the default configured remote\nfor your current branch, you must specify a branch on the command line.\n","stacktrace":"github.com/tektoncd/pipeline/pkg/git.run\n\tgithub.com/tektoncd/pipeline/pkg/git/git.go:41\ngithub.com/tektoncd/pipeline/pkg/git.Fetch\n\tgithub.com/tektoncd/pipeline/pkg/git/git.go:96\nmain.main\n\tgithub.com/tektoncd/pipeline/cmd/git-init/main.go:53\nruntime.main\n\truntime/proc.go:203"}
+{"level":"warn","ts":1599570486.7088163,"caller":"git/git.go:97","msg":"Failed to pull origin : exit status 1"}
+{"level":"error","ts":1599570486.710481,"caller":"git/git.go:41","msg":"Error running git [checkout master]: exit status 1\nerror: pathspec 'master' did not match any file(s) known to git\n","stacktrace":"github.com/tektoncd/pipeline/pkg/git.run\n\tgithub.com/tektoncd/pipeline/pkg/git/git.go:41\ngithub.com/tektoncd/pipeline/pkg/git.Fetch\n\tgithub.com/tektoncd/pipeline/pkg/git/git.go:99\nmain.main\n\tgithub.com/tektoncd/pipeline/cmd/git-init/main.go:53\nruntime.main\n\truntime/proc.go:203"}
+{"level":"fatal","ts":1599570486.7105443,"caller":"git-init/main.go:54","msg":"Error fetching git repository: exit status 1","stacktrace":"main.main\n\tgithub.com/tektoncd/pipeline/cmd/git-init/main.go:54\nruntime.main\n\truntime/proc.go:203"}
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-git-source-meta-dukecon-jx-jax-prep-dukeco-4676l-cqbs2'. The execution of the pipeline has stopped.[0m
